@@ -155,10 +155,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
 
-window.addEventListener('scroll', function() {
-  var m = document.querySelector('.mountains-bg');
-  if (m) m.style.transform = 'translateY(' + (window.scrollY * -0.08) + 'px)';
-}, { passive: true });
+// Mountains are purely fixed — no scroll effects
 </script>
 
 </body>
