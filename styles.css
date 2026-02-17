@@ -29,10 +29,10 @@ body {
   z-index: 0;
   width: 100%;
   height: auto;
-  max-height: 65vh;
+  max-height: 85vh;
   object-fit: contain;
   object-position: bottom center;
-  opacity: 0.18;
+  opacity: 0.22;
   pointer-events: none;
   filter: sepia(0.3) saturate(0.4) brightness(1.4);
   -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 85%);
@@ -85,8 +85,8 @@ body {
   position: fixed;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px; height: 500px;
-  opacity: 0.025;
+  width: 200px; height: 200px;
+  opacity: 0.02;
   pointer-events: none;
   z-index: 0;
 }
@@ -179,16 +179,22 @@ nav .nav-links a:hover::after { width: 100%; }
 }
 
 .tibetan-line-1 {
-  font-size: clamp(2.8rem, 7vw, 4.5rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   animation: brushReveal 2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
 .tibetan-line-2 {
-  font-size: clamp(2.2rem, 5.5vw, 3.5rem);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   animation: brushReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
 }
 
@@ -449,21 +455,22 @@ section {
   border-top: 1px solid var(--border);
 }
 
-/* PRAYER FLAGS — Three.js container */
-.prayer-flags-container {
+/* PRAYER FLAGS — static banner image */
+.prayer-flags-banner {
   width: 100%;
-  height: 260px;
   position: relative;
   z-index: 1;
-  margin: -40px 0 0;
+  margin: -20px 0 0;
   overflow: hidden;
-  opacity: 0.85;
+  text-align: center;
 }
 
-.prayer-flags-container canvas {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
+.prayer-flags-banner img {
+  width: min(700px, 80vw);
+  height: auto;
+  display: inline-block;
+  mix-blend-mode: screen;
+  filter: brightness(1.1);
 }
 
 /* PRAYER FLAGS — static photo divider */

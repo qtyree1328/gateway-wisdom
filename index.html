@@ -38,8 +38,10 @@
   </div>
 </section>
 
-<!-- 3D Prayer Flags -->
-<div id="prayer-flags" class="prayer-flags-container" aria-hidden="true"></div>
+<!-- Prayer Flags Banner -->
+<div class="prayer-flags-banner" aria-hidden="true">
+  <img src="assets/prayer-flags-banner.jpg" alt="Prayer flags">
+</div>
 
 <div class="content">
 
@@ -97,8 +99,7 @@
   <p>A gift of knowledge that transcends geographical and financial barriers.</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="prayer-flags.js"></script>
+<!-- Prayer flags are now a static image -->
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
