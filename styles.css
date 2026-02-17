@@ -3,8 +3,8 @@
 :root {
   --bg: #FFF8F0;
   --text: #2D2D2D;
-  --accent: #8B1A1A;
-  --gold: #C5A55A;
+  --accent: #7B1818;
+  --gold: #BF5700;
   --border: #E8DFD0;
 }
 
@@ -253,7 +253,7 @@ section {
 }
 
 .btn:hover {
-  background: #6e1515;
+  background: #5e1212;
   transform: translateY(-2px);
 }
 
@@ -266,7 +266,7 @@ section {
 }
 
 .btn-gold:hover {
-  background: #b0913d;
+  background: #a04800;
 }
 
 .section-heading {
@@ -318,7 +318,7 @@ section {
 }
 
 .cta-section {
-  background: linear-gradient(180deg, transparent, rgba(197, 165, 90, 0.06));
+  background: linear-gradient(180deg, transparent, rgba(191, 87, 0, 0.06));
   border-radius: 16px;
   padding: 60px 24px !important;
   margin-bottom: 40px;
