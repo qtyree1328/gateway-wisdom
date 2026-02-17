@@ -35,6 +35,9 @@
   </div>
 </section>
 
+<!-- 3D Prayer Flags -->
+<div id="prayer-flags" class="prayer-flags-container" aria-hidden="true"></div>
+
 <div class="content">
 
   <section id="pitch" class="section-fade">
@@ -91,6 +94,8 @@
   <p>A gift of knowledge that transcends geographical and financial barriers.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="prayer-flags.js"></script>
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

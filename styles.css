@@ -421,6 +421,48 @@ section {
   border-top: 1px solid var(--border);
 }
 
+/* PRAYER FLAGS — Three.js container */
+.prayer-flags-container {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  z-index: 1;
+  margin: -40px 0 0;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+.prayer-flags-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* PRAYER FLAGS — static photo divider */
+.prayer-flags-photo {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto 40px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.prayer-flags-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.35;
+  filter: sepia(0.15) saturate(0.8);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  transition: opacity 1.5s ease !important;
+}
+
+.prayer-flags-photo:hover img {
+  opacity: 0.55;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
