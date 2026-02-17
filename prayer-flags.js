@@ -101,11 +101,12 @@
         var nx = (x / flagW) + 0.5; // 0 to 1 across width
         var ny = 1.0 - ((y / flagH) + 0.5); // 0 at top, 1 at bottom
 
-        // Wind wave — increases toward free end (right side) and bottom
+        // Wind wave — increases toward free end, boosted by scroll
+        var scrollBoost = 1.0 + Math.min((window._scrollSpeed || 0) * 0.15, 4.0);
         var freedom = nx * 0.7 + ny * 0.3;
-        var wave1 = Math.sin(nx * 4.0 + t * 1.8 + phase) * 0.12 * freedom;
-        var wave2 = Math.sin(nx * 7.0 + t * 2.5 + phase * 1.3) * 0.04 * freedom;
-        var wave3 = Math.cos(ny * 3.0 + t * 1.2 + phase * 0.7) * 0.03 * freedom;
+        var wave1 = Math.sin(nx * 4.0 + t * 1.8 * scrollBoost + phase) * 0.12 * freedom * scrollBoost;
+        var wave2 = Math.sin(nx * 7.0 + t * 2.5 * scrollBoost + phase * 1.3) * 0.04 * freedom * scrollBoost;
+        var wave3 = Math.cos(ny * 3.0 + t * 1.2 + phase * 0.7) * 0.03 * freedom * scrollBoost;
 
         pos.setZ(i, wave1 + wave2 + wave3);
 

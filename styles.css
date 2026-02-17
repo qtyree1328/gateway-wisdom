@@ -29,15 +29,16 @@ body {
   z-index: 0;
   width: 100%;
   height: auto;
-  max-height: 45vh;
-  object-fit: cover;
-  object-position: bottom;
-  opacity: 0.12;
+  max-height: 65vh;
+  object-fit: contain;
+  object-position: bottom center;
+  opacity: 0.18;
   pointer-events: none;
-  filter: sepia(0.4) saturate(0.3) brightness(1.6) contrast(0.7);
-  mix-blend-mode: multiply;
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 75%);
-  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 75%);
+  filter: sepia(0.3) saturate(0.4) brightness(1.4);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 85%);
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 85%);
+  transform: translateZ(0);
+  will-change: opacity;
 }
 
 /* FLOATING LIGHT MOTES — monastery dust particles */
@@ -161,17 +162,44 @@ nav .nav-links a:hover::after { width: 100%; }
   overflow: hidden;
 }
 
-.hero-calligraphy {
-  max-width: min(600px, 85vw);
-  opacity: 0;
-  transform: scale(0.92);
-  animation: calligraphyReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+/* Drawn Tibetan text — two lines like the calligraphy image */
+.tibetan-drawn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-@keyframes calligraphyReveal {
-  0% { opacity: 0; transform: scale(0.92); clip-path: inset(0 100% 0 0); }
-  40% { opacity: 1; transform: scale(0.96); clip-path: inset(0 40% 0 0); }
-  100% { opacity: 1; transform: scale(1); clip-path: inset(0 0 0 0); }
+.tibetan-drawn span {
+  font-family: 'Noto Serif Tibetan', serif;
+  color: var(--text);
+  display: inline-block;
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+}
+
+.tibetan-line-1 {
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  animation: brushReveal 2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.tibetan-line-2 {
+  font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  animation: brushReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+}
+
+@keyframes brushReveal {
+  0% { opacity: 0; clip-path: inset(0 100% 0 0); }
+  30% { opacity: 1; clip-path: inset(0 60% 0 0); }
+  100% { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+
+.hero-calligraphy {
+  margin-bottom: 12px;
 }
 
 .hero-title {

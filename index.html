@@ -27,7 +27,10 @@
 </nav>
 
 <section class="hero" id="hero">
-  <img src="assets/tibetan-title.jpg" alt="མཁྱེན་རབ་སྒོ་འབྱེད། — Tibetan calligraphy" class="hero-calligraphy">
+  <div class="hero-calligraphy tibetan-drawn">
+    <span class="tibetan-line-1">མཁྱེན་ རབ་སྒོ་</span>
+    <span class="tibetan-line-2">འབྱེད།</span>
+  </div>
   <h1 class="hero-title">Gateway to Sublime Wisdom</h1>
   <p class="hero-tagline">A Khan Academy for the sacred languages of Buddhism</p>
   <div class="scroll-indicator" onclick="document.getElementById('pitch').scrollIntoView({behavior:'smooth'})">
@@ -102,10 +105,10 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
 
-// Gentle parallax on mountains
+// Track scroll for prayer flag wind intensity
 window.addEventListener('scroll', function() {
-  var m = document.querySelector('.mountains-bg');
-  if (m) m.style.transform = 'translateY(' + (window.scrollY * -0.08) + 'px)';
+  window._scrollSpeed = Math.abs(window.scrollY - (window._lastScrollY || 0));
+  window._lastScrollY = window.scrollY;
 }, { passive: true });
 </script>
 
