@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gateway to Sublime Wisdom — མཁྱེན་རབ་སྒོ་འབྱེད།</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <span class="nav-title tibetan">མཁྱེན་རབ་སྒོ་འབྱེད།</span>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <img src="assets/tibetan-title.jpg" alt="མཁྱེན་རབ་སྒོ་འབྱེད། — Tibetan calligraphy" class="hero-calligraphy">
+  <h1 class="hero-title">Gateway to Sublime Wisdom</h1>
+  <p class="hero-subtitle">མཁྱེན་རབ་སྒོ་འབྱེད།</p>
+  <p class="hero-tagline">A Khan Academy for the sacred languages of Buddhism</p>
+  <div class="scroll-indicator" onclick="document.getElementById('vision').scrollIntoView({behavior:'smooth'})">
+    <span></span>
+  </div>
+</section>
+
+<div class="content">
+
+  <section id="vision" class="section-fade">
+    <div class="divider">❖</div>
+    <h2 class="section-heading">A Master's Final Wish</h2>
+    <p class="vision-text">Kyabje Garchen Rinpoche has expressed that his final unfulfilled wish is to establish a comprehensive online language school to preserve and transmit the linguistic heritage of the Tibetan Buddhist tradition – securing it for generations to come.</p>
+    <p class="vision-text" style="margin-top: 20px; font-style: normal; font-size: 1.05rem; color: #666;">This platform will offer world-class instruction in Sanskrit, Classical Tibetan, and Colloquial Tibetan — freely accessible to anyone in the world who wishes to learn. No tuition. No barriers. Only Dharma.</p>
+    <div style="text-align:center; margin-top: 36px;">
+      <a href="about.html" class="btn btn-gold">Support This Vision</a>
+    </div>
+  </section>
+
+  <section class="section-fade">
+    <div class="divider">❖</div>
+    <h2 class="section-heading">What We Will Build</h2>
+    <p style="text-align:center; max-width:680px; margin:0 auto 40px; color:#666; font-size:1.05rem; line-height:1.8;">A comprehensive digital platform offering three pillars of Buddhist linguistic heritage — produced by exceptional instructors and freely available to every student on earth.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-tibetan">བོད་སྐད།</div>
+        <h3>Colloquial Tibetan</h3>
+        <p>A complete three-tier program — from foundational literacy to spoken fluency — enabling students worldwide to communicate in Central Tibetan dialect.</p>
+      </div>
+      <div class="card">
+        <div class="card-tibetan">བོད་ཡིག།</div>
+        <h3>Classical Tibetan</h3>
+        <p>Unlocking direct access to Buddhist scripture and philosophy in the literary language refined over centuries to carry the subtleties of the Dharma.</p>
+      </div>
+      <div class="card">
+        <div class="card-tibetan" style="font-family:'Cormorant Garamond',serif; font-size:1.6rem;">संस्कृतम्</div>
+        <h3>Sanskrit</h3>
+        <p>Restoring connection to the original language of the Buddha's teachings — the root from which all Buddhist traditions flowered.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-fade">
+    <div class="divider">❖</div>
+    <h2 class="section-heading">Addressing a Need</h2>
+    <p class="body-text">While traditional language schools exist, they remain out of reach for countless students who lack the flexibility to travel or the financial means required to attend. By investing in exceptional instructors and producing high-quality video instruction, we will make authentic language education available to students everywhere.</p>
+    <p class="body-text">This is not simply an educational initiative — it is an act of preservation. As Tibetan language schools throughout China face systematic closure and the next generation of Himalayan Buddhists grows increasingly distant from their linguistic heritage, the need for this platform has never been more urgent.</p>
+  </section>
+
+  <section class="section-fade" style="padding-bottom: 40px;">
+    <div class="divider">❖</div>
+    <div class="blessing-box">
+      <h2 class="section-heading" style="margin-bottom: 16px;">Blessed by His Holiness the Dalai Lama</h2>
+      <p class="body-text" style="text-align: center;">His Holiness shares the profound wish that the Tibetan language be preserved and strengthened on the global stage. Upon hearing Kyabje Garchen Rinpoche's aspiration, His Holiness blessed the vision and the project, seeing it as a fulfillment of his own mission.</p>
+      <p style="text-align:center; margin-top:20px; color: var(--gold); font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-style:italic;">"This initiative carries the blessing and vision of these great masters."</p>
+    </div>
+  </section>
+
+  <section class="section-fade cta-section">
+    <h2 class="section-heading">Be Part of This Legacy</h2>
+    <p class="body-text" style="text-align:center;">Your support will help bring Kyabje Garchen Rinpoche's final wish to fruition — a gift of knowledge that transcends geographical and financial barriers, securing the linguistic heritage of Buddhism for generations to come.</p>
+    <div style="text-align:center; margin-top: 32px;">
+      <a href="about.html" class="btn btn-gold">Learn More & Support</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="lotus">✿</div>
+  <p>A gift of knowledge that transcends geographical and financial barriers.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
