@@ -106,11 +106,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
 
-// Track scroll for prayer flag wind intensity
-window.addEventListener('scroll', function() {
-  window._scrollSpeed = Math.abs(window.scrollY - (window._lastScrollY || 0));
-  window._lastScrollY = window.scrollY;
-}, { passive: true });
+// No scroll effects on mountains — purely fixed
 </script>
 
 </body>

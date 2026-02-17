@@ -38,7 +38,8 @@ body {
   -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 85%);
   mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 85%);
   transform: translateZ(0);
-  will-change: opacity;
+  will-change: auto;
+  backface-visibility: hidden;
 }
 
 /* FLOATING LIGHT MOTES — monastery dust particles */
