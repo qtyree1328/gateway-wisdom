@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<!-- Atmospheric layers -->
+<img src="assets/himalayan-mountains.jpg" alt="" class="mountains-bg" aria-hidden="true">
+<img src="assets/endless-knot.svg" alt="" class="endless-knot-watermark" aria-hidden="true">
+<div class="particles" aria-hidden="true">
+  <div class="mote"></div><div class="mote"></div><div class="mote"></div>
+  <div class="mote"></div><div class="mote"></div><div class="mote"></div>
+  <div class="mote"></div><div class="mote"></div><div class="mote"></div>
+  <div class="mote"></div><div class="mote"></div><div class="mote"></div>
+</div>
+
 <nav>
   <span class="nav-title tibetan">མཁྱེན་རབ་སྒོ་འབྱེད།</span>
   <div class="nav-links">
@@ -139,6 +149,11 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', function() {
+  var m = document.querySelector('.mountains-bg');
+  if (m) m.style.transform = 'translateY(' + (window.scrollY * -0.08) + 'px)';
+}, { passive: true });
 </script>
 
 </body>
