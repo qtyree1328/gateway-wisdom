@@ -463,15 +463,12 @@ section {
   z-index: 1;
   margin: -20px 0 0;
   overflow: hidden;
-  text-align: center;
 }
 
 .prayer-flags-banner img {
-  width: min(700px, 80vw);
+  width: 100%;
   height: auto;
-  display: inline-block;
-  mix-blend-mode: screen;
-  filter: brightness(1.1);
+  display: block;
 }
 
 /* PRAYER FLAGS — static photo divider */
