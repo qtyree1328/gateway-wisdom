@@ -186,7 +186,7 @@ nav .nav-links a:hover::after { width: 100%; }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  animation: brushReveal 4.5s cubic-bezier(0.1, 0.2, 0.3, 1) 0.8s forwards;
+  animation: brushReveal 2s cubic-bezier(0.1, 0.2, 0.3, 1) 0.8s forwards;
 }
 
 .tibetan-line-2 {
@@ -196,7 +196,7 @@ nav .nav-links a:hover::after { width: 100%; }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  animation: brushReveal 3.5s cubic-bezier(0.1, 0.2, 0.3, 1) 4s forwards;
+  animation: brushReveal 1.5s cubic-bezier(0.1, 0.2, 0.3, 1) 3s forwards;
 }
 
 @keyframes brushReveal {
@@ -218,7 +218,7 @@ nav .nav-links a:hover::after { width: 100%; }
   font-size: clamp(1.6rem, 4vw, 2.8rem);
   color: var(--accent);
   opacity: 0;
-  animation: fadeUp 1.5s ease 8s forwards;
+  animation: fadeUp 1.2s ease 4.8s forwards;
   margin-top: 24px;
   letter-spacing: 0.04em;
 }
@@ -237,7 +237,7 @@ nav .nav-links a:hover::after { width: 100%; }
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: #888;
   opacity: 0;
-  animation: fadeUp 1s ease 9.5s forwards;
+  animation: fadeUp 1s ease 6s forwards;
   margin-top: 16px;
   font-style: italic;
   letter-spacing: 0.02em;
@@ -247,7 +247,7 @@ nav .nav-links a:hover::after { width: 100%; }
   position: absolute;
   bottom: 40px;
   opacity: 0;
-  animation: fadeUp 0.8s ease 10.5s forwards;
+  animation: fadeUp 0.8s ease 7s forwards;
   cursor: pointer;
 }
 
