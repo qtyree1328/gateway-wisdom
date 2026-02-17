@@ -32,10 +32,12 @@ body {
   max-height: 45vh;
   object-fit: cover;
   object-position: bottom;
-  opacity: 0.1;
+  opacity: 0.12;
   pointer-events: none;
-  filter: sepia(0.3) saturate(0.4) brightness(1.1);
+  filter: sepia(0.4) saturate(0.3) brightness(1.6) contrast(0.7);
   mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 75%);
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 75%);
 }
 
 /* FLOATING LIGHT MOTES — monastery dust particles */
